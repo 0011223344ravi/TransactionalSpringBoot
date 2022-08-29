@@ -23,7 +23,7 @@ public class TransactionalSpringBootApplication {
 
 
 	@PostMapping("/bookFlightTicket")
-	public FlightBookingAcknowledgement bookFlightTicket(@RequestBody FlightBookingRequest request) throws InsufficientAmountException {
+	public FlightBookingAcknowledgement bookFlightTicket(@RequestBody FlightBookingRequest request) {
 		return service.bookFlightTicket(request);
 	}
 

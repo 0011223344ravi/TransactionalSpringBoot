@@ -17,7 +17,9 @@ public class PaymentUtils {
     }
 
 
-    public static boolean validateCreditLimit(String accNo, double paidAmount) throws InsufficientAmountException {
+
+
+    public static boolean validateCreditLimit(String accNo, double paidAmount) {
         if (paidAmount > paymentMap.get(accNo)) {
             throw new InsufficientAmountException("insufficient fund..!");
         } else {
